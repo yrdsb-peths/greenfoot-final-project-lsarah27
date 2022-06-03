@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    private boolean lose = false;
     public int score = 0;
     Label scoreLabel;
 
@@ -20,9 +21,13 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
         
-        // Create the seal object
+        // Create a seal object
         Seal s  = new Seal();
         addObject(s, 300, 300);
+        
+        //Create a barrel object
+        Barrel b = new Barrel();
+        addObject(b, 200, 0);
         
         // Create a label
         scoreLabel = new Label(0, 80);
@@ -38,6 +43,7 @@ public class MyWorld extends World
     {
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        lose = true;
     }
     
   
@@ -56,9 +62,12 @@ public class MyWorld extends World
      */
     public void createCake()
     {
-        Cake c = new Cake();
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
-        addObject(c, x, y);
+        if (lose == false)
+        {
+            Cake c = new Cake();
+            int x = Greenfoot.getRandomNumber(600);
+            int y = 0;
+            addObject(c, x, y);
+        }
     }
 }
