@@ -23,7 +23,7 @@ public class MyWorld extends World
         
         // Create a seal object
         Seal s  = new Seal();
-        addObject(s, 300, 300);
+        addObject(s, 525, 300);
         
         //Create a barrel object
         Barrel b = new Barrel();
