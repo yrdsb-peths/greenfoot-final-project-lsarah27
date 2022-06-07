@@ -50,5 +50,7 @@ public class TitleScreen extends World
         label.setLocation(306,230);
         seal.setLocation(94,370);
         seal.setLocation(85,297);
+        Cake cake = new Cake();
+        addObject(cake,509,85);
     }
 }
