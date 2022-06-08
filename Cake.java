@@ -10,8 +10,9 @@ public class Cake extends Actor
 {
     int speed = 1;
 
-    public Cake(){
-        getImage().scale(20,20);
+    public Cake()
+    {
+        getImage().scale(70,70);
     }
     
     /**
