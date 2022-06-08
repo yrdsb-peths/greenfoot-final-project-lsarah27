@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ The\ world\ where\ the\ Seal\ lives\ in.\r\n\ \r\n\ @author\ Lynn\ \r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ The\ world\ where\ the\ Seal\ lives\ in.\n\ \n\ @author\ Lynn\ \n\ @version\ June\ 2022\n
 comment1.params=
 comment1.target=MyWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
 comment2.params=
 comment2.target=void\ gameOver()
-comment2.text=\r\n\ End\ the\ game\ and\ draw\ 'GameOver'\r\n
+comment2.text=\n\ End\ the\ game\ and\ draw\ 'GameOver'\n
 comment3.params=
 comment3.target=void\ increaseScore()
-comment3.text=\r\n\ Increase\ score\r\n
+comment3.text=\n\ Increase\ score\n
 comment4.params=
 comment4.target=void\ createCake()
-comment4.text=\r\n\ Create\ new\ cake\ at\ a\ random\ location\ at\ the\ top\ of\ the\ screen\r\n
+comment4.text=\n\ Create\ new\ cake\ at\ a\ random\ location\ at\ the\ top\ of\ the\ screen\n
 numComments=5

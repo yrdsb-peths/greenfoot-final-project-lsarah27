@@ -9,6 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cake extends Actor
 {
     int speed = 1;
+
+    public Cake(){
+        getImage().scale(20,20);
+    }
     
     /**
      * Act - do whatever the Cake wants to do. This method is called whenever
@@ -16,21 +20,23 @@ public class Cake extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-        // Cake falls downwards
-        int x = getX();
-        int y = getY() + speed;
-        setLocation(x, y);
-        
         // Remove cake and draw game over when cake gets to bottom
-        MyWorld world = (MyWorld) getWorld();
-        if(getY() >= world.getHeight())
-        {
-            world.gameOver();
-            world.removeObject(this);
+        if(getWorld() instanceof MyWorld){
+            MyWorld world = (MyWorld) getWorld();
+
+            // cake falling
+            int x = getX();
+            int y = getY() + speed;
+            setLocation(x, y);
+            
+            if(getY() >= world.getHeight())
+            {
+                world.gameOver();
+                world.removeObject(this);
+            }
         }
     }    
-    
+
     public void setSpeed(int spd)
     {
         speed = spd;
