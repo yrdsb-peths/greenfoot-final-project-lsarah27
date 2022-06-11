@@ -1,20 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Seal who loves Cake.
+ * The Seal.
  * 
  * @author Lynn 
  * @version June 2022
  */
 public class Seal extends Actor
 {
-    
+    GreenfootSound crunchSound = new GreenfootSound("sounds/crunchsound.mp3");
     /**
      * Act - do whatever the Seal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     public void act() 
     {
+        
         // Add your action code here.
         if(Greenfoot.isKeyDown("Left"))
         {
@@ -35,6 +37,7 @@ public class Seal extends Actor
     {
         if(isTouching(Cake.class))
         {
+            crunchSound.play();
             removeTouching(Cake.class);
             MyWorld world = (MyWorld) getWorld();
             world.createCake();
