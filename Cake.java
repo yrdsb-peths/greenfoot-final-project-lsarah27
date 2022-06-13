@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cake extends Actor
 {
     int speed = 1;
-
+    
     public Cake()
     {
         getImage().scale(70,70);
@@ -37,7 +37,10 @@ public class Cake extends Actor
             }
         }
     }    
-
+    
+    /**
+     * Increase speed level every 5 points.
+     */
     public void setSpeed(int spd)
     {
         speed = spd;

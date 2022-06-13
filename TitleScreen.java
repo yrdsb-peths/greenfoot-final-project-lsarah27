@@ -24,7 +24,7 @@ public class TitleScreen extends World
     }
 
     /**
-     * The main world act loop
+     * The main world act loop.
      */
     public void act()
     {
@@ -45,20 +45,15 @@ public class TitleScreen extends World
         Seal seal = new Seal();
         addObject(seal,92,313);
         seal.setLocation(114,314);
-
         Label label = new Label("Press <space> to Start", 40);
         addObject(label,282,243);
         label.setLocation(306,230);
-
         seal.setLocation(94,370);
         seal.setLocation(85,297);
-
         Cake cake = new Cake();
         addObject(cake,509,85);
-
         Barrel barrel = new Barrel();
         addObject(barrel,373,190);
-
         cake.setLocation(547,270);
         seal.setLocation(89,303);
         cake.setLocation(547,269);

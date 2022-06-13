@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    GreenfootSound music = new GreenfootSound("sounds/Elevator-music.mp3");
     private boolean lose = false;
     public int score = 0;
     Label scoreLabel;
     int level = 1;
-    
+  
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -39,7 +38,7 @@ public class MyWorld extends World
     }
     
     /**
-     * End the game and draw 'GameOver'
+     * End the game and announce 'GameOver'.
      */
     public void gameOver()
     {
@@ -48,24 +47,22 @@ public class MyWorld extends World
         lose = true;
     }
     
-  
     /**
-     * Increase score
+     * Increase score, increase level of difficulty.
      */
     public void increaseScore()
     {
         score++;
         scoreLabel.setValue(score);
-        
+
         if(score % 5 == 0)
         {
             level += 1;
         }
     }
     
-    
     /**
-     * Create new cake at a random location at the top of the screen
+     * Create new cake at a random location at the top of the screen.
      */
     public void createCake()
     {
@@ -77,10 +74,5 @@ public class MyWorld extends World
             int y = 0;
             addObject(c, x, y);
         }
-    }
-    
-    public void act()
-    {
-        music.play();
     }
 }
