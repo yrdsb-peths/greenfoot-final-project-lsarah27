@@ -12,7 +12,7 @@ public class MyWorld extends World
     public int score = 0;
     Label scoreLabel;
     int level = 1;
-  
+
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -31,8 +31,6 @@ public class MyWorld extends World
         addObject(b, 200, 0);
         
         // Create a label
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
         
         createCake();
     }
@@ -53,7 +51,7 @@ public class MyWorld extends World
     public void increaseScore()
     {
         score++;
-        scoreLabel.setValue(score);
+        showText("Score: " + score, 50, 25);
 
         if(score % 5 == 0)
         {
